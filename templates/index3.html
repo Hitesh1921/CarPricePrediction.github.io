@@ -1,0 +1,82 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 27 20:01:36 2022
+{{ url_for('static', filename='style.css') }}
+@author: MyLap
+"""
+
+<! DOCKTYPE html>
+<html>
+<head>
+    <title>Car Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="main">
+    <div class="registration">
+        <h2>Fill the Answers</h2>
+        <form action="{{ url_for('predict')}}" id="register" method="post">
+                <label>Year Car Bought</label>
+                <br>
+                <input type="number" name="Year" id="first" placeholder="Enter the year">
+                <br><br>
+                <label>Price Car Bought</label>
+                <br>
+                <input type="number" name="Present_Price" id="second" placeholder="Enter the the bought price of car">
+                <br><br> 
+                <label>Approx Kilometers Driven</label>
+                <br>
+                <input type="number" name="Kms_Driven" id="third" placeholder="Enter approximate distance car drivenn in km">
+                <br><br> 
+                <label>Car Owners :</label>
+                <br>
+                &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="Owner" id="fourth" value="0" >
+                &nbsp;
+                <span id="fourth">0</span>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="Owner" id="fourth" value="1">
+                &nbsp;
+                <span id="fourth">1</span>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="Owner" id="fourth" value="3" >
+                &nbsp;
+                <span id="fourth">3</span>
+                <br><br> 
+                <label>Fuel Type</label>
+                &nbsp; &nbsp;
+                <select name="Fuel_Type_Petrol" id="fuel" required="required">
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Diesel">CNG</option>
+                </select>
+                <br><br>
+                <label>Are you A Dealer or Individual?</label>
+                <br>
+                &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="Seller_Type_Individual" id="resea" >
+                &nbsp;
+                <span id="resea" value="Dealer">Dealer</span>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="Seller_Type_Individual" id="resea" >
+                &nbsp;
+                <span id="resea" value="Individual" >Individual</span>
+                <br><br>
+                <label>Transmission type</label>
+                &nbsp; &nbsp;
+                <select name="Transmission_Mannual" id="research" required="required">
+                    <option value="Mannual">Manual Car</option>
+                    <option value="Automatic">Automatic Car</option>
+                </select>
+               <br><br><button id="sub" type="submit ">SUBMIT</button>
+        </form>
+        <br><br><h3>{{ prediction_text }}<h3>
+
+</div><!----end main-->
+<script>
+    aler("{{ prediction_text }}")
+</script>
+
+
+</body>
+</html>

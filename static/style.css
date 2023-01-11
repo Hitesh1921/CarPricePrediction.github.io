@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(carbackground.jpg);
+    background-size: 123%;
+    background-position: -350px -19px;
+}
+div.main{
+    width: 400px;
+    margin: 100px auto 0px auto;
+}
+h2{
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+}
+div.registration{
+    background-color: rgba(92, 83, 83, 0.3);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px 
+    rgba(0,0,0,0.3);
+    color:#fff;
+
+}
+form#register{
+    margin: 40px;
+    
+}
